@@ -42,7 +42,7 @@
         <!--投稿-->
         <scene sceneID="7Kk-sw-AFU">
             <objects>
-                <viewController storyboardIdentifier="ImageSelect" id="pxV-Cb-Qph" customClass="ImageSelectViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelect" id="pxV-Cb-Qph" customClass="ImageSelectViewController" customModule="Instagram" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EqB-to-HNk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +92,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="22s-Zz-3Yc" customClass="TabBarController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pyR-NC-y6E">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
