@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630EEA0E27C7587C0085AADC /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EEA0D27C7587C0085AADC /* Const.swift */; };
 		6315E8BF27C3AB8800E2B94D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6315E8BE27C3AB8800E2B94D /* GoogleService-Info.plist */; };
 		63B4C88827BE30580052EF79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4C88727BE30580052EF79 /* AppDelegate.swift */; };
 		63B4C88A27BE30580052EF79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4C88927BE30580052EF79 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630EEA0D27C7587C0085AADC /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		6315E8BE27C3AB8800E2B94D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6315E8C027C3AC5400E2B94D /* Instagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagram.entitlements; sourceTree = "<group>"; };
 		63B4C88427BE30580052EF79 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				63B4C8A127BE32170052EF79 /* PostViewController.swift */,
 				63B4C8A327BE32230052EF79 /* SettingViewController.swift */,
 				63B4C8A527BE3FDF0052EF79 /* TabBarController.swift */,
+				630EEA0D27C7587C0085AADC /* Const.swift */,
 				63B4C88D27BE30580052EF79 /* Main.storyboard */,
 				63B4C89027BE305D0052EF79 /* Assets.xcassets */,
 				6315E8BE27C3AB8800E2B94D /* GoogleService-Info.plist */,
@@ -232,6 +235,7 @@
 				63B4C89C27BE31DA0052EF79 /* LoginViewController.swift in Sources */,
 				63B4C88827BE30580052EF79 /* AppDelegate.swift in Sources */,
 				63B4C88A27BE30580052EF79 /* SceneDelegate.swift in Sources */,
+				630EEA0E27C7587C0085AADC /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
