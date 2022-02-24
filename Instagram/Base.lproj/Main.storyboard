@@ -99,10 +99,25 @@
                     <view key="view" contentMode="scaleToFill" id="3OM-wY-7yL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-LN-355">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="egf-gc-Dve"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pxU-LN-355" firstAttribute="leading" secondItem="egf-gc-Dve" secondAttribute="leading" id="4oS-Oh-gDV"/>
+                            <constraint firstItem="egf-gc-Dve" firstAttribute="bottom" secondItem="pxU-LN-355" secondAttribute="bottom" id="rCd-OX-zlH"/>
+                            <constraint firstItem="pxU-LN-355" firstAttribute="top" secondItem="egf-gc-Dve" secondAttribute="top" id="u32-ST-TfM"/>
+                            <constraint firstItem="egf-gc-Dve" firstAttribute="trailing" secondItem="pxU-LN-355" secondAttribute="trailing" id="yNh-FP-8tz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="Aau-IR-qWo"/>
+                    <connections>
+                        <outlet property="tableView" destination="pxU-LN-355" id="6nN-z0-oHd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2E-3n-l1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
