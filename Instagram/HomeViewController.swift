@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -36,7 +37,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
                 // 取得したdocumentをもとにPostDataを作成し、postArrayの配列にする。
                 self.postArray = querySnapshot!.documents.map { document in
-                    print("DEBUG_PRINT: document取得 \(document.documentID)")
+                    print("DEBUG_PRINsT: document取得 \(document.documentID)")
                     let postData = PostData(document: document)
                     return postData
                 }
@@ -62,8 +63,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         cell.setPostData(postArray[indexPath.row])
 
-        // セル内のボタンのアクションをソースコードで設定する
+        // セル内のボタンのアクションをソースコードで設定する(like)
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
+
+        // セル内のボタンのアクションをソースコードで設定する(コメント)
+        cell.commentButton.addTarget(self, action:#selector(commentButton(_:forEvent:)), for: .touchUpInside)
 
         return cell
     }
@@ -95,5 +99,31 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
             postRef.updateData(["likes": updateValue])
         }
+    }
+
+    
+    //コメントボタンをタップで投稿のIDを渡してコメント画面に遷移
+    @objc func commentButton(_ sender: UIButton, forEvent event: UIEvent) {
+    
+        //画面遷移
+        let storyboard: UIStoryboard = self.storyboard!
+        let commentView = storyboard.instantiateViewController(identifier: "CommentView") as! CommentViewController
+
+//        //投稿のIDを渡す
+//        // タップされたセルのインデックスを求める
+//        let touch = event.allTouches?.first
+//        let point = touch!.location(in: self.tableView)
+//        let indexPath = tableView.indexPathForRow(at: point)
+//
+//        // 配列からタップされたインデックスのデータを取り出す
+//        let postData = postArray[indexPath!.row]
+//
+//        //インデックスのidをCommentViewContorollerに渡す
+//        commentView.postId = postData.id
+        
+        self.present(commentView, animated: true, completion: nil)
+        
+        
+        
     }
 }

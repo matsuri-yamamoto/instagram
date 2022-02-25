@@ -51,8 +51,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncC-aQ-nUz">
+                        <rect key="frame" x="126" y="349" width="40" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Xa0-9h-2CJ"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="rectangle.and.pencil.and.ellipsis" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYZ-Lz-tXp">
+                        <rect key="frame" x="26" y="420.5" width="268" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="dYZ-Lz-tXp" firstAttribute="trailing" secondItem="Tzd-JH-e5X" secondAttribute="trailing" id="0oB-7E-Eko"/>
                     <constraint firstItem="Q42-Fk-Wtz" firstAttribute="top" secondItem="zVr-gV-4ee" secondAttribute="bottom" constant="10" id="883-xJ-jQb"/>
                     <constraint firstItem="Q42-Fk-Wtz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="9Ct-se-Yj5"/>
                     <constraint firstItem="hgF-rv-bcv" firstAttribute="centerY" secondItem="Q42-Fk-Wtz" secondAttribute="centerY" id="Brg-7K-dXI"/>
@@ -60,18 +74,26 @@
                     <constraint firstItem="zVr-gV-4ee" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KRy-6Q-HEb"/>
                     <constraint firstItem="bBP-PJ-rFd" firstAttribute="centerY" secondItem="Q42-Fk-Wtz" secondAttribute="centerY" id="LER-y1-LNs"/>
                     <constraint firstItem="bBP-PJ-rFd" firstAttribute="leading" secondItem="hgF-rv-bcv" secondAttribute="trailing" constant="10" id="M6g-8P-OsT"/>
+                    <constraint firstItem="ncC-aQ-nUz" firstAttribute="leading" secondItem="hgF-rv-bcv" secondAttribute="trailing" constant="10" id="NQd-dB-sda"/>
+                    <constraint firstItem="dYZ-Lz-tXp" firstAttribute="leading" secondItem="Tzd-JH-e5X" secondAttribute="leading" id="Tto-nx-rg8"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Tzd-JH-e5X" secondAttribute="trailing" constant="10" id="UEs-21-hUx"/>
                     <constraint firstItem="zVr-gV-4ee" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XBu-gO-Nga"/>
                     <constraint firstItem="hgF-rv-bcv" firstAttribute="leading" secondItem="Q42-Fk-Wtz" secondAttribute="trailing" constant="10" id="act-rj-9D5"/>
+                    <constraint firstItem="ncC-aQ-nUz" firstAttribute="centerY" secondItem="Q42-Fk-Wtz" secondAttribute="centerY" id="bKp-Os-cMV"/>
                     <constraint firstItem="zVr-gV-4ee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eVs-Hr-qzL"/>
                     <constraint firstAttribute="trailing" secondItem="zVr-gV-4ee" secondAttribute="trailing" id="hSt-wv-UqM"/>
+                    <constraint firstItem="dYZ-Lz-tXp" firstAttribute="top" secondItem="Tzd-JH-e5X" secondAttribute="bottom" constant="10" id="qJl-F5-3vR"/>
                     <constraint firstItem="Tzd-JH-e5X" firstAttribute="top" secondItem="Q42-Fk-Wtz" secondAttribute="bottom" constant="10" id="r7A-8K-au2"/>
                     <constraint firstItem="Tzd-JH-e5X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="t7h-Po-3Zk"/>
+                    <constraint firstItem="Tzd-JH-e5X" firstAttribute="top" secondItem="Q42-Fk-Wtz" secondAttribute="bottom" constant="10" id="wBI-ai-qpg"/>
+                    <constraint firstItem="bBP-PJ-rFd" firstAttribute="centerY" secondItem="Q42-Fk-Wtz" secondAttribute="centerY" id="zhc-UF-50K"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="Tzd-JH-e5X" id="msV-cA-ZjW"/>
+                <outlet property="comment" destination="dYZ-Lz-tXp" id="imp-sX-asX"/>
+                <outlet property="commentButton" destination="ncC-aQ-nUz" id="764-MC-yXl"/>
                 <outlet property="dateLabel" destination="bBP-PJ-rFd" id="cYC-im-tLh"/>
                 <outlet property="likeButton" destination="Q42-Fk-Wtz" id="M9o-eD-wLO"/>
                 <outlet property="likeLabel" destination="hgF-rv-bcv" id="xue-Sc-7d3"/>
@@ -82,5 +104,6 @@
     </objects>
     <resources>
         <image name="like_none" width="40" height="40"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
     </resources>
 </document>

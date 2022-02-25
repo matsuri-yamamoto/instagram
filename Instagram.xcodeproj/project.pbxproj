@@ -12,6 +12,7 @@
 		630EEA1327C7A2770085AADC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EEA1127C7A2770085AADC /* PostTableViewCell.swift */; };
 		630EEA1427C7A2770085AADC /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EEA1227C7A2770085AADC /* PostTableViewCell.xib */; };
 		6315E8BF27C3AB8800E2B94D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6315E8BE27C3AB8800E2B94D /* GoogleService-Info.plist */; };
+		63589BCA27C8519D00452482 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63589BC927C8519D00452482 /* CommentViewController.swift */; };
 		63B4C88827BE30580052EF79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4C88727BE30580052EF79 /* AppDelegate.swift */; };
 		63B4C88A27BE30580052EF79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4C88927BE30580052EF79 /* SceneDelegate.swift */; };
 		63B4C88F27BE30580052EF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B4C88D27BE30580052EF79 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		630EEA1227C7A2770085AADC /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		6315E8BE27C3AB8800E2B94D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6315E8C027C3AC5400E2B94D /* Instagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagram.entitlements; sourceTree = "<group>"; };
+		63589BC927C8519D00452482 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		63B4C88427BE30580052EF79 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B4C88727BE30580052EF79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B4C88927BE30580052EF79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				630EEA0D27C7587C0085AADC /* Const.swift */,
 				630EEA0F27C7A22C0085AADC /* Postdata.swift */,
 				630EEA1127C7A2770085AADC /* PostTableViewCell.swift */,
+				63589BC927C8519D00452482 /* CommentViewController.swift */,
 				630EEA1227C7A2770085AADC /* PostTableViewCell.xib */,
 				63B4C88D27BE30580052EF79 /* Main.storyboard */,
 				63B4C89027BE305D0052EF79 /* Assets.xcassets */,
@@ -245,6 +248,7 @@
 				63B4C8A227BE32170052EF79 /* PostViewController.swift in Sources */,
 				63B4C8A427BE32230052EF79 /* SettingViewController.swift in Sources */,
 				63B4C89C27BE31DA0052EF79 /* LoginViewController.swift in Sources */,
+				63589BCA27C8519D00452482 /* CommentViewController.swift in Sources */,
 				63B4C88827BE30580052EF79 /* AppDelegate.swift in Sources */,
 				63B4C88A27BE30580052EF79 /* SceneDelegate.swift in Sources */,
 				630EEA0E27C7587C0085AADC /* Const.swift in Sources */,
@@ -405,9 +409,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.rino.yamamoto.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -427,9 +431,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.rino.yamamoto.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

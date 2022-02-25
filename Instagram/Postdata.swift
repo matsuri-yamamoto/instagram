@@ -2,6 +2,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class PostData: NSObject {
     var id: String
@@ -10,6 +11,7 @@ class PostData: NSObject {
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
+    var comment: String?
 
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
@@ -33,5 +35,7 @@ class PostData: NSObject {
                 self.isLiked = true
             }
         }
+        
+        self.comment = postDic["comment"] as? String
     }
 }
