@@ -37,13 +37,23 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
                 // 取得したdocumentをもとにPostDataを作成し、postArrayの配列にする。
                 self.postArray = querySnapshot!.documents.map { document in
-                    print("DEBUG_PRINsT: document取得 \(document.documentID)")
+                    print("DEBUG_PRINT: document取得 \(document.documentID)")
                     let postData = PostData(document: document)
                     return postData
                 }
                 // TableViewの表示を更新する
                 self.tableView.reloadData()
             }
+        } else {
+            // ログイン未(またはログアウト済み)
+            if listener != nil {
+                // listener登録済みなら削除してpostArrayをクリアする
+                listener?.remove()
+                listener = nil
+                postArray = []
+                tableView.reloadData()
+            }
+        
         }
     }
 
@@ -63,11 +73,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         cell.setPostData(postArray[indexPath.row])
 
-        // セル内のボタンのアクションをソースコードで設定する(like)
+        // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
-
-        // セル内のボタンのアクションをソースコードで設定する(コメント)
-        cell.commentButton.addTarget(self, action:#selector(commentButton(_:forEvent:)), for: .touchUpInside)
 
         return cell
     }
@@ -99,6 +106,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
             postRef.updateData(["likes": updateValue])
         }
+
     }
 
     
